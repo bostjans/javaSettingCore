@@ -118,28 +118,43 @@ public class Setting {
     }
 
 
+    private static int init() {
+        int         iResult;
+
+        // Initialization
+        iResult = ConstGlobal.RETURN_OK;
+        getInstance();
+        return iResult;
+    }
+
     private int readFromXML(InputStream aobj_is) {
+        int         iResult;
+
+        // Initialization
+        iResult = ConstGlobal.RETURN_OK;
+
         // .. read Properties ..
         if (aobj_is != null) {
             try {
                 properties = new Properties();
                 properties.loadFromXML(aobj_is);
             } catch (IOException e) {
+                iResult = ConstGlobal.RETURN_ERROR;
                 logger.severe("Config.readFromXML(): Error at reading configuration properties!"
                         + " Msg.: " + e.getMessage());
             }
         }
-
         // .. and close IS
         if (aobj_is != null) {
             try {
                 aobj_is.close();
             } catch(IOException e) {
+                iResult = ConstGlobal.RETURN_WARN;
                 logger.severe("Config.readFromXML(): Exc. at closing InputStream!"
                         + " Msg.: " + e.getMessage());
             }
         }
-        return ConstGlobal.RETURN_OK;
+        return iResult;
     }
 
 
