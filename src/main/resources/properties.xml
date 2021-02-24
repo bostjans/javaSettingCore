@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!-- CHANGE LOG
+  ..
+-->
+<properties>
+	<comment>Configuration file for Lenko REST Interface</comment>
+
+	<entry key = "App.Implementation">AppImpl</entry>
+	<entry key = "App.EnvType">${App.EnvType}</entry>
+
+	<!--
+	<comment>DB parameters</comment>
+    -->
+	<entry key = "jdbc.type">${jdbc.type}</entry>
+	<entry key = "jdbc.host">${jdbc.host}</entry>
+	<entry key = "jdbc.host1">dbms01</entry>
+	<entry key = "jdbc.port">${jdbc.Port}</entry>
+	<entry key = "jdbc.username0">looser</entry>
+	<entry key = "jdbc.username">${jdbc.username}</entry>
+	<entry key = "jdbc.PSW">${jdbc.psw}</entry>
+	<!--
+    <entry key = "jdbc.PSW">QtetDB4fvQ==</entry> This is encrypted Value for: ekeeper
+    -->
+	<entry key = "jdbc.DBname">${jdbc.dbName}</entry>
+	<entry key = "jdbc.DBname1">somedb</entry>
+	<entry key = "jdbc.connectionsNumber">1</entry>
+
+	<entry key = "Http.Rest.Referer">${Http.Rest.Referer}</entry>
+	<entry key = "Http.Rest.Origin">${Http.Rest.Origin}</entry>
+
+</properties>
