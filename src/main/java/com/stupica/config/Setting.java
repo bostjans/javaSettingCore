@@ -46,6 +46,12 @@ public class Setting {
         }
         return objInstance;
     }
+    public static Setting getInstance() {
+        if (objInstance == null) {
+            objInstance = new Setting();
+        }
+        return objInstance;
+    }
 
 
     public Setting() {
