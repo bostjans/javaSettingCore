@@ -118,7 +118,7 @@ public class Setting {
     }
 
 
-    private static int init() {
+    public static int init() {
         int         iResult;
 
         // Initialization
